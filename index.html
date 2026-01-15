@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gentle Net Foundation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+
+        nav a:hover, nav a.active {
+            color: #764ba2;
+            border-bottom: 2px solid #764ba2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page {
+            display: none;
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .page.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid #764ba2;
+            padding-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+            margin: 2rem 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+            color: #764ba2;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Gentle Net Foundation</h1>
+        <p>Supporting families through crisis toward lasting stability</p>
+        <p>By: George, Meera, Mariam, Terrance and Mouza</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a onclick="showPage('george')" class="active">Mission & Vision for Change</a></li>
+            <li><a onclick="showPage('meera')">Organizational Structure & Governance</a></li>
+            <li><a onclick="showPage('mariam')">Theory of Change & Access to Support</a></li>
+            <li><a onclick="showPage('terrence')">Support Model & Impact Evaluation</a></li>
+            <li><a onclick="showPage('mouza')">Funding Decisions & Public Engagement</a></li>
+            <li><a onclick="showPage('contact')">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- George's Page -->
+        <div id="george" class="page active">
+            <h2>Foundation Mission</h2>
+            <p>The Gentle Net Foundation exists to ensure that families who lose their primary income earner are not left financially destabilized at their most vulnerable moment. By providing immediate support beyond what Social Security offers and sustaining families through the period of recovery, the Foundation enables households to grieve with dignity, preserve educational opportunity, and regain long-term economic stability.</p>
+
+            <h2>Intended Change</h2>
+            <p>The Gentle Net Foundation seeks to change the way society responds to the loss of a primary income earner. Families should not be forced into financial crisis, educational disruption, or long-term instability simply because public systems provide limited and delayed support. The Foundation aims to replace reactive, insufficient aid with timely, comprehensive support that preserves a family's standard of living, protects children's educational trajectories, and allows families the time and security needed to recover and become self-sustaining again.</p>
+        </div>
+
+        <!-- Meera's Page -->
+        <div id="meera" class="page">
+            <h2>Staff Expertise</h2>
+            <p>The organization will establish its base by recruiting staff who share its purpose and possess distinctive professional abilities. The Program Officers will handle grant portfolios and monitor budgets while they maintain initiative planning coordination. The Research and Evaluation Specialists will track results to establish program success, enabling organizations to base their decisions on evidence. The Community Engagement and Partnerships Staff will identify organizations that qualify for funding by reaching out to local community groups. The Financial and Operations Staff will handle budgeting, reporting, and grant distribution. Legal and Compliance Advisors will ensure regulatory compliance and ethical grantmaking. The Communications Specialists team will handle all public communication activities, including creating reports and implementing transparency initiatives. The organization operates efficiently because it follows a systematic approach, enabling its mission-based response and keeping it accountable.</p>
+
+            <h2>Organizational Structure</h2>
+            <p>The organization will maintain a simple design that relies on team members working together. An Executive Director will oversee strategy, operations, and external relationships. The organization will divide its staff into three essential departments: Programs, Operations, and Learning & Communications. The Programs team will provide grants to organizations while maintaining regular contact with all funded organizations. The Operations team will handle financial management, legal compliance, and administrative work. The Learning & Communications team will evaluate programs and assess their impact, then distribute the findings. The organization has established specific roles, yet it actively encourages collaboration among team members. The organization maintains operational efficiency through this structure, which enables adaptability and mission-based alignment without creating excessive administrative complexity.</p>
+
+            <h2>Board Governance</h2>
+            <p>The board's role is to provide governance, oversight, and strategic direction. The board members will defend the foundation's mission through their funding decisions and uphold ethical standards for resource management. The organization will have these members who will monitor financial stability, evaluate key decisions, and maintain long-term organizational stability. The board serves as a strategic advisory group that provides professional guidance to the Executive Director on strategic decisions, but avoids involvement in operational activities. The board members will create strategic alliances through their professional connections to develop both institutional alliances and community understanding of the foundation. By focusing on accountability and vision rather than implementation, the board ensures the foundation remains effective and mission-driven.</p>
+        </div>
+
+        <!-- Mariam's Page -->
+        <div id="mariam" class="page">
+            <h2>Theory of Change</h2>
+            <p>The Gentle Net Foundation believes that when families lose their sole income provider, immediate financial and emotional support is critical to long-term stability.</p>
+            
+            <p>By covering funeral expenses, short-term income gaps, and medical costs, the foundation reduces financial stress during the grieving period. At the same time, providing access to mental health resources supports emotional recovery and future decision-making.</p>
+            
+            <p>Overall, this approach allows families to maintain their standard of living, keep children in school, and begin healing without being forced into long-term financial or emotional hardship.</p>
+
+            <h2>Grant Recipient Identification</h2>
+            <p>The Gentle Net Foundation partners with hospitals, funeral homes, and local community leaders to identify families who have recently lost their primary income provider.</p>
+            <p>With the family's consent, these institutions help connect them to the foundation and guide them through a simple application process. Support is assessed based on the family's circumstances and immediate needs.</p>
+        </div>
+
+        <!-- Terrence's Page -->
+        <div id="terrence" class="page">
+            <h2>Forms of Support</h2>
+            <p>The support could come in different forms. First, we could have Immediate Crisis Grants, which will be provided by the Foundation and will be direct funding to cover the critical gap between the loss of a breadwinner and the receipt of government benefits. This could include covering 100% of funeral and burial expenses, as well as outstanding medical bills from the deceased's hospitalization. In addition, we should have Educational Stipends. This will be long term funding to prevent children from being forced into minimum-wage labor, the Foundation provides monthly stipends. These payments are intended to support the child's well-being and standard of living through both secondary and higher education. Furthermore, for the children who have the ability to pursue higher education, we will provide the tuition cost and support that child so that in the future the family can recover from losing their primary income earner.</p>
+
+            <h2>Funding Partnerships</h2>
+            <p>While the Foundation acts as the primary benefactor, its operational model relies on a network of community and professional partners to identify families and sustain their recovery. For example, we should have medical professionals serve as a primary source of contact to identify families at the moment of a breadwinner's death to support the family. And we should collaborate with external counselors and specialists who are engaged to provide the professional support necessary for long-term emotional recovery for those family that needs this support.</p>
+
+            <h2>Evaluation and Outcomes</h2>
+            <p>A primary indicator of success is a child successfully graduating from a university without having their education fragmented by financial crisis.</p>
+            
+            <p>Success is also measured by a family member obtaining a well-paying, long-term career with high growth opportunities, rather than just a survival-level job.</p>
+            
+            <p>Furthermore, the ultimate goal is for the family to reach a point where they can maintain their previous standard of living entirely without third-party financial support.</p>
+            
+            <p>Lastly, by providing mental health resources, the Foundation evaluates success by the family's increased resilience and their capacity to plan for the future beyond mere survival, and this could be done through evaluations provided by mental specialists.</p>
+        </div>
+
+        <!-- Mouza's Page -->
+        <div id="mouza" class="page">
+            <h2>Funding Decision Process</h2>
+            <p>The GentleNet Foundation believes that funding decisions should reflect the circumstances families face in the immediate aftermath of losing a primary income earner. Each family is paired with a designated representative who works closely with them throughout the process, helping to understand their needs and advocating on their behalf. While the representative gathers information and guides the family, the final decisions about funding including the level and duration of support are made by the foundation's leadership or board. This structure allows families to have a voice in the decision making process while ensuring that resources are allocated responsibly and in alignment with the foundation's mission to support long term stability and recovery.</p>
+
+            <h2>Publicity and Outreach</h2>
+            <p>Publicity would play an important role in helping the Gentle Net Foundation reach families at the moment they need support the most. Referrals from medical professionals and local networks depend on a visible and trusted presence. At the same time outreach must be handled with care as the foundation prioritizes partnerships and community based visibility rather than broad marketing ensuring that awareness grows in a way that protects families dignities while strengthening the pathways through which they can be supported.</p>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact" class="page">
+            <h2>Contact Us</h2>
+            <p>For more information about The Gentle Net Foundation, partnership opportunities, or to refer a family in need, please reach out to us:</p>
+            
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> info@gentlenetfoundation.org</p>
+                <p><strong>Phone:</strong> Phone: +1 (202) 555-0174</p>
+                <p><strong>Mailing Address:</strong> The Gentle Net Foundation<br>
+                245 Cedar Grove Avenue, Suite 410
+Arlington, VA 22201
+United States</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>For Healthcare Providers & Community Partners</h3>
+                <p>If you are a medical professional, funeral home director, or community leader who works with families experiencing loss, we invite you to connect with us about establishing a partnership. Together, we can ensure families receive the support they need at their most vulnerable moment.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>For Families in Need</h3>
+                <p>If you or someone you know has recently lost a primary income earner and needs support, please don't hesitate to reach out. Our representatives are here to help guide you through a simple application process and provide the assistance your family needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 The Gentle Net Foundation</p>
+        <p>Supporting families through crisis toward lasting stability</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Remove active class from all nav links
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+            
+            // Add active class to clicked nav link
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
